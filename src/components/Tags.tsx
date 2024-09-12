@@ -15,7 +15,7 @@ const Tags: React.FC<TagsProps> = ({ userId }) => {
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const tagSet = new Set<string>();
       snapshot.docs.forEach((doc) => {
-        const entryTags = doc.data().tags?.split(',').map((tag: string) => tag.trim());
+        const entryTags = doc.data().tags ? doc.data().tags.split(',').map((tag: string) => tag.trim()) : [];
         entryTags.forEach((tag: string) => tagSet.add(tag));
       });
 

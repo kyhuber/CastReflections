@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://source.unsplash.com/featured/?podcast'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+  }
+  
+  .landing-page {
+    height: 100vh; /* Full height to cover the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth {
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #1d3557;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #457b9d;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  button.sign-in-button {
+    background-color: #457b9d;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button.sign-in-button:hover {
+    background-color: #1d3557;
+  }
+  

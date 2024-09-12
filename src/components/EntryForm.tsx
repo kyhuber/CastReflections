@@ -45,19 +45,37 @@ const EntryForm: React.FC<EntryFormProps> = ({ userId }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title or Topic" required />
-      <input type="text" value={podcast} onChange={(e) => setPodcast(e.target.value)} placeholder="Podcast Name and Episode" required />
-      <input type="text" value={timestamp} onChange={(e) => setTimestamp(e.target.value)} placeholder="Timestamp (e.g., 15:23)" />
-      <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Write your takeaway or reflection here..." required />
-      <select value={mood} onChange={(e) => setMood(e.target.value)}>
-        <option value="">Select Mood</option>
-        <option value="Inspired">Inspired</option>
-        <option value="Excited">Excited</option>
-        <option value="Confused">Confused</option>
-        <option value="Intrigued">Intrigued</option>
-      </select>
-      <input type="text" value={tags} onChange={(e) => setTags(e.target.value)} placeholder="Tags (e.g., technology, philosophy)" />
-      <button type="submit">Submit Reflection</button>
+      <div className="form-group">
+        <label>Title or Topic</label>
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title or Topic" required />
+      </div>
+      <div className="form-group">
+        <label>Podcast Name and Episode</label>
+        <input type="text" value={podcast} onChange={(e) => setPodcast(e.target.value)} placeholder="Podcast Name and Episode" required />
+      </div>
+      <div className="form-group">
+        <label>Timestamp</label>
+        <input type="text" value={timestamp} onChange={(e) => setTimestamp(e.target.value)} placeholder="Timestamp (e.g., 15:23)" />
+      </div>
+      <div className="form-group">
+        <label>Reflection/Notes</label>
+        <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Write your takeaway or reflection here..." required />
+      </div>
+      <div className="form-group">
+        <label>Mood</label>
+        <select value={mood} onChange={(e) => setMood(e.target.value)}>
+          <option value="">Select Mood</option>
+          <option value="Inspired">Inspired</option>
+          <option value="Excited">Excited</option>
+          <option value="Confused">Confused</option>
+          <option value="Intrigued">Intrigued</option>
+        </select>
+      </div>
+      <div className="form-group">
+        <label>Tags</label>
+        <input type="text" value={tags} onChange={(e) => setTags(e.target.value)} placeholder="Tags (e.g., technology, philosophy)" />
+      </div>
+      <button type="submit" className="submit-btn">Submit Reflection</button>
     </form>
   );
 };
